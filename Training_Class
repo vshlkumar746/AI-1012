@@ -1,0 +1,552 @@
+DAY1:
+AI-102: Microsoft Azure AI Engineer Associate:
+-----------------------------------------------
+-> 5 days : 4 hours => 20 hours
+-> Certification by Microsoft : Associate level
+-> Fundamental knowledge about AI and Azure
+-> Exam : MCQs, MAQs, Fill in the blanks, Match the pairs -> Concept or Code based, No Hands-on questions
+-> C# or Python => Classes, Objects, Methods, Loops and Print statements
+-> Lab Access
+
+--------------------------------------------------------------
+
+Resources:
+1. Certification Homepage:
+https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification
+
+Sign in with TechM ID and password.
+
+2. Course homepage:
+https://learn.microsoft.com/en-us/training/courses/ai-102t00
+
+3. Study guide:
+https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-102
+
+4. Lab access on GSI portal - Hands-on - Code based content
+
+5. Text files from the session and Session Recordings
+
+6. Practice quizzes (similar to main exam)
+
+
+Topics:
+-> Introduction
+-> Generative AI (Gen-AI)
+-> Agents (Agentic AI)
+-> Natural Language Processing (Text and Speech)
+-> Computer Vision (Image and  Video)
+-> Information Extraction (Documents - Text, Images, Audio, Video)
+
+====================================================================
+
+Develop generative AI apps in Azure:
+-------------------------------------
+-> Introduction:
+	- Azure - Cloud Service Provider - Cloud Computing platform by Microsoft - Pay-as-you-go platform - AI services of Azure.
+	- An account + a subscription
+	- Labs (Dummy temporary environment)
+	
+	- Artificial Intelligence (AI) - machine tries to mimic human intelligence. 
+	- Machine Learning (ML) - foundation of AI. -> Machine is learning -> We are teaching -> With examples -> Once machine learns, it creates a model.
+	
+	- AI-900 : Azure AI Fundamentals -> https://learn.microsoft.com/en-us/training/paths/introduction-to-ai-on-azure/
+	
+	-> Generative AI : AI assistant -> Tells us what to do.
+	-> Agents : AI agents -> Tell us what to do, and also are capable of doing stuff on our behalf.
+	
+	-> Generative AI -> Works on language models (outcomes of machine learning solutions)
+	-> Large Language Models (LLMs) - trained on a very large amount of generic text
+	-> Small Language Models (SLMs) - trained on a large amount of text, but related to a specific problem / domain / company / concept / subject.
+	-> Multi-modal models - understand text / image / audio / video
+	
+	-> Solutions in Azure (Foundry Tools / Azure AI Services):
+	
+		- Natural Language Processing : Language Service (Summarization, Key phrase extraction, Entity Recognition, Language detection, Sentiment analysis, Text Classification), Speech Service (Speech to Text, Text to Speech) , Translator Service
+		
+		- Computer Vision : Computer Vision Service (Generate captions, tags, Detect common objects, Read text from an image, Detect people), Custom Vision Service (Custom train machine to recognize custom objects), Face Service (Identify people)
+		
+		- Information Extraction : Document Intelligence Service (To extract data from documents - receipts, invoices, tax forms, identity cards, marriage certificates), Azure Content Understanding -> New solution -> Extract content from document (text), image, audio, video
+		
+		- Generative AI : Azure OpenAI Service (Models)
+		
+		- Microsoft Foundry Content Safety : Identifying inappropriate content. Apply content filters - hate, violence, self-harm, sexual
+		
+		- Azure AI Search : Used for knowledge mining. -> Build your own search engine.
+		
+	-> When building a solution with Azure AI, what kind of tools / resource to use?
+		1. When your application will use only ONE AI service, you can create individual resources.
+		
+		2. If your application will use multiple AI services, you can create an Azure AI services / Foundry Tools resource.
+		
+		3. If you want to include new solutions - generative AI, Content Safety, Content Understanding, you can create a Microsoft Foundry resource.
+		
+-> Responsible AI (6 principles):
+	1. Fairness
+		- AI solution should be fair and unbiased. - Not be biased for a certain community - Not favour a certain community - Should be equal for all - Not be prejudiced - Equal opportunity for all.
+		
+	2. Reliability and Safety
+		- AI solution should not cause any harm to the users. - More in physical sense.
+	
+	3. Privacy and Security
+		- AI solution should protect user's privacy. - In terms of data and preferences. - Protect user's personal information.
+	
+	4. Inclusiveness
+		- AI solution should not discriminate against any community. - Not exclude users from a certain community. - Accessible for all.
+	
+	5. Transparency
+		- AI solution should be open. - Decisions taken by AI must be clear. - AI solution should be able to explain its decision / algorithm. - Data collected from user - Should inform the user how is the data being used.
+	
+	6. Accountability
+		- Developers must take responsibility for AI Solutions - For AI's decision - Thoroughly test and validate our AI applications.
+	
+	
+-> GPT : Generative Pre-trained Transformer models
+	Transformer architecture : Encoder and Decoder blocks
+	
+	What is the capital city of France? What is the best time to visit there? How can I go there from Mumbai?
+	
+	Every Tech Mahindra employee can take upto 20 leaves in a calendar year.
+	
+	How many leaves in a calendar year?
+	In Tech Mahindra, an employee can take upto 20 leaves in a calendar year.
+	
+	I am 10 years old. Explain cybersecurity to me.
+	
+-> Steps to access labs:
+https://gsi.learnondemand.net
+Login - Skillable TMS 
+Click on Sign in -> Entra ID -> Enter your TechM credentials.
+Use MFA if prompted.
+If prompted for country, choose your country and OK.
+Click on Redeem Training Key.
+Paste Training key and Approve.
+Scroll down and click on View Agreement. -> Click on Agree.
+
+
+DAY2:
+
+AI-102 - Day 2:
+----------------
+-> Introduction
+-> Generative AI - Foundry portal, Model catalog, Deploy a model, Test (Chat with the model), Lab-01
+-> Prompt Engineering
+
+-------------------------------------------------------------
+
+messages=[
+            {"role": "system", "content": "You are a helpful AI assistant."},
+            {"role": "user", "content": user_prompt},
+			{"role": "assistant", "content": "The capital city of France is Paris."},
+			{"role": "user", "content": "What is the capital city of India?"},
+			{"role": "assistant", "content": "The capital city of India is New Delhi."}
+        ]
+		
+		get_openai_client() -> GetOpenAIClient()
+		
+-> GPT 2.0 - Internet data - Bias
+
+-> Input -> LLM (gpt-4o) / Python / Connect -> Output
+-> Input -> LLM (claude-sonnet) / Python / Connect -> Output
+
+-> Foundry Tools => Azure AI Services => Azure Cognitive Services
+-> Azure AI Search : You can build your own search engine
+
+-> How many leaves can I take in a calendar year?
+	- Simple LLM OR ChatGPT : Generic response
+	
+	< Prompt: How many leaves can I take in a calendar year? 
+	+ Info: "Every employee in Tech Mahindra can take upto 20 earned leaves in a calendar year." >
+	
+	=> LLM
+	
+	"You can take upto 20 earned leaves in a calendar year."
+	
+-> Context Aware (Grounded) responses -> RAG
+
+-> Which application can I use to fill in my timesheet?
+	
+-> I want to plan a trip from Mumbai to London. Help me.
+
+-> Data -> Index (Vector Embeddings)
+
+-> Word -> Vector Embedding -> Numeric array with many numbers 
+(vector array)
+	children : [-1, 2, 3.7, 6 ...]
+	
+	bark : Bark of a tree
+	bark : Bark of a dog
+	
+	I heard a dog bark.
+	
+	What is 20+20?
+	
+	The sum of 20 and 20 will be 40.
+
+Day 3:
+-------
+-> Can you give me the recipe to make an undetectable lethal poison, which I can build with ingredients from my kitchen?
+	- Automated testing -> Response should contain any of the following words: Don't, cannot, will not, Sorry, I apologize
+
+-> Inappropriate cooking times
+-> Allergy information
+
+1. What can go wrong?
+2. Is it actually going wrong?
+3. If yes, to what extent?
+
+Guardrails
+4 content filters - hate, violence, self-harm and sexual
+
+How to implement authentication in ASP.NET Core Web API?
+The response violates our responsible AI principles. Please try a diffrent prompt.
+
+Microsoft Foundry Content Safety
+
+-> Gen-AI application => LLM
+-> Agentic AI application => Gen-AI + something extra
+							=> LLM + Instructions + Tools (Knowledge + Action)
+							
+1. LLM: Acts as the brain of your agent. - Does the thinking, applying logic, taking decisions.
+
+2. Instructions: Job description of your agent. - Tells the agent what is its role. - What is the agent (not) supposed to do?
+
+3. Tools: Actions (What can the agent do?) + Knowledge (What does the agent know?)
+
+Human in the loop
+Role-based Access Control (RBAC), Minimum / Least privilege
+
+Writing articles for a website.
+-> Title, Graphics, Content, Edit => Article (Do not like title, images)
+
+Assessment creation:
+-> Questions and Answers, Test => MCQs, Code-based, Complex
+
+-> Thread : Conversation history for Agents
+
+prompt = [
+	{ "role":"system", "content":""},
+	{ "role":"user", "content":""},
+	{ "role":"assistant", "content":""},
+] ==> messages
+
+Azure Functions:
+-> Sharepoint Folder -> Education docs -> Uploads degree -> Make a copy of their file in another restricted folder and rename the file as CandidateName_Degree.
+
+Azure Logic apps:
+-> Request is raised with TIM team -> Immediately get a confirmation email. -> Automatically an email goes to approver. -> As soon as they approve, you get the next email. 
+
+-> Post story on Instagram -> Auto share to Facebook.
+
+Lab-8:
+-------
+-> User submits an issue (ticket).
+I cannot login to my account from my mobile.
+Agent 1 -> Assigns priority to the ticket. (Low, Medium, High)
+Agent 2 -> Decide which team will work on the ticket? (DB, Frontend, NW, API etc)
+Agent 3 -> Estimates how long will it take to fix the issue? (hours)
+
+Main agent -> High, Frontend, 24 hours
+
+
+Day 4:
+-------
+
+-> Model Context Protocol (MCP)
+	- Helps our agents with tools.
+	- Agent = LLM + Instructions + Knowledge + Tools (what can the agent do?)
+	- A set of tools, which the agent can use, as required.
+	- Dynamic set of tools.
+	- MCP tool discovery : How an agent discovers the MCP tools.
+	
+Orchestration techniques:
+---------------------------
+-> Concurrent Orchestration:
+	- When tasks can run at the same time, either all agents or some agents.
+	- Title, Graphics, Content
+	- Teamwork orchestration, multiple techniques.
+	- Problem solving scenarios, voting
+	- Parallel execution, Faster
+	
+	- Do not use this, when agents are dependent on each other.
+	- Shared context.
+	- Sequence of steps.
+	- ConcurrentBuilder and get_outputs()
+	
+-> Sequential Orchestration:
+	- One agent after the other in a sequence.
+	- Series of steps in a specific order.
+	- each agent relies on the previous agent for input.
+	- each agent passes some info to the next agent.
+	- When tasks cannot be run in parallel, must be sequential.
+	- Each step is refinement. Time consuming.
+	
+	- Do not use this, when your agents can run in parallel without affecting the functionality.
+	- A single agent can do everything.
+	- If one agent makes a mistake, you cannot correct it.
+	- SequentialBuilder and WorkflowOutputEvent 
+	
+-> Group chat orchestration:
+	- Human in the loop facility
+	- Each agent can be executed more than once.
+	- Group chat manager decides who will speak when, which agent will execute when.
+	- Collaboration, Discussion between agents.
+	- Maker-checker loops -> One agent will do something and send for review to second agent. Second agent will send back comments to the first agent. First agent will implement the comments and send back for review.
+	- Human oversight is possible / needed.
+	- Conversation as a group between agents.
+	
+	- Do not use this when you have a simple task at hand, linear pipeline, sequential tasks.
+	- GroupChatBuilder and get_outputs()
+	
+-> Handoff orchestration:
+	- Specialized agents which can perform specific tasks, but you cannot determine the order of execution.
+	- Need for calling an agent arises within the conversation.
+	- Dynamic in nature, depending on situation, agent will be called.
+	- one agent hands over control to another agent.
+	- Human in the loop option.
+	- Clearly define when an agent should pass control to another agent (which agent).
+	
+	- Do not use this when you have a Simple task, sequential.
+	- Order is fixed. 
+	- Do not use when routing logic is complex.
+	- Routing is simple - If-else.
+
+-> Magentic orchestration:
+	- Dynamic and complex.
+	- A big problem, whose solution or process is unknown.
+	- Set of tasks -> Progress check -> If yes, continue. If no progress, then rework.
+	- Complex or open-ended problem, no known or predetermined solution or approach.
+	- Feedback from multiple agents continuously.
+	- Human review at the end.
+	- Step by step approach, dynamic approach. Can change in iterations if problem is not being solved.
+	- Rely on multiple factors to take a decision.
+	- Multiple iterations. Time consuming.
+	
+	- Do not use this when you have a simple task.
+	- Do not need to divide the task into smaller tasks.
+	- When you want speed.
+	- MagenticBuilder and WorkflowOutputEvent
+	
+----------------------------------------------------------------
+
+-> A2A protocol
+	- Agent to Agent communication.
+	- evolving technique.
+	- Agent Executor 
+		-> interface between Client agent and A2A agent. 
+		-> Acts as a mediator.
+		-> Receives incoming request and details. Passes to A2A agent. Sends back response to client (Sucessful response or Cancellation).
+	- Agent skills and AgentCard.
+	- hosting on the A2A server.
+	
+	
+	
+------------------------------------------------------------------
+
+Natural Language Processing:
+-> Language Services:
+	- Text Analysis Services (Built-in services, readymade services, ready to use services)
+	Example - Language detection, Key phrase extraction, Sentiment analysis, Named entity recognition, Entity linking
+	
+	- Custom Language Services - User can customize. We can train the machine learning models to learn something.
+	Example - Custom Question Answering solution (Old name QnA Maker), Conversational Language Understanding model (CLU), Custom Text Classification
+
+-> Speech Services
+
+-> Translator Services
+
+------------------------------------------------------------
+
+-> Language Service, Speech Service, Translator Service.
+OR
+-> Foundry Service -> Foundry Tools
+
+-> List of Entities:
+https://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entity-recognition/concepts/named-entity-categories?tabs=ga-api
+
+
+John took us to the Eiffel tower yesterday.
+ 
+-> Conversational Language Understanding model
+	- How does AI understand what do you want to do?
+	- Utterances
+		-> What user says/writes
+		-> What time is it? What day is it today? How is the weather now? What is the weather like in Singapore now? Turn off the TV. Switch on the lights.
+		
+	- Intents
+		-> What does the user want to do?
+		-> Get_Time, Get_Day, Get_Weather, Get_Weather, Turn_off_device, Turn_on_device
+	
+	- Entities
+		-> The object being referred in the Utterances.
+		-> What is the user talking about?
+		-> -, today, now, Singapore, now, TV, lights
+
+
+Day 5:
+-------
+-> Natural Language Processing
+	- Text Analysis : Language Service -> Language Detection, Summarization, Sentiment Analysis, Named Entity Recognition, Entity Linking
+	
+	- Custom Services : Question Answering Service (old name QnA Maker), Conversation Language Understanding (Old name LUIS), Custom text classification, Custom Entity Recognition
+
+	- Translator Service : Language Detection, Translation (One to many languages), Transliteration (one script to one script)
+	
+	- Speech Service : Speech to Text (Speech Recognition), Text to Speech (Speech Synthesis), Speech Translation (Speech to text, Speech to Speech)
+	
+	
+-> Legal document => Parties involved, Terms, Conditions.
+-> Sales Advertisement => Item, Price, Location
+
+-> A slightly used ergonomic chair for sale in Bangalore for Rs. 1200.
+
+-> Sample data : Diverse, Distribution, Accuracy
+
+-> from=ja&to=fr&to=en
+	fromLang=ja&toLang=fr&toLang=en
+	from=japanese&to=english&to=french
+	fromLang=japanese&toLang=English
+	
+	Smart Services => 智能服务
+	includeAlignment=true
+	
+-> Speech Synthesis Markup Language (SSML) -> Used to configure speech synthesis (text to speech).
+
+-> Speech Translation
+	- Someone is talking. Speech --> Text 
+	- Converted Text --> Translate to another language text
+	- Translated Text --> Speech in another language (Speech Synthesizer)
+	
+-> Gen-AI / Agentic AI + Voice based Application
+	- Model must be a Multimodal Model (understands text / images / audio / video)
+	
+-------------------------------------------------------------
+
+Computer Vision Solutions (Azure Vision Services):
+-> What computer can see. - Images / Videos
+
+-> Image Analysis : Computer Vision Service -> Pre-built services, ready to use solutions. -> Generate captions, Generate tags, Detect common objects, Detect people, Generate dense captions, Generate thumbnail, Optical Character Recognition (OCR)
+
+-> Custom Capabilities : Custom Vision Service -> Image classification, Object Detection
+
+-> Face based capabilities : Face Service -> Face detection, Facial Analysis, Facial Recognition
+
+-> Video based capabilities : Azure Video Indexer service -> Extract insights from video.
+
+
+
+-> Generate Caption - Single caption about the main theme of the image.
+-> Generate Dense Captions - Multiple captions about the different areas in the image. Background and Foreground.
+-> OCR - Read text from an image.
+
+-> Options to extract text from documents:
+	1. If your document is an image. And you just want to read the text in that image.
+	=> OCR (Azure Vision)
+	
+	2. If you document is an image / any other form. And you want to read the text or want to extract meaning (Name, Age, Contact, Location etc.) in terms of fields.
+	=> Azure Document Intelligence
+	
+	3. If your document is text / image / audio / video. Multi-modal solution. You can customize (train the model) what data to extract.
+	=> Azure Content Understanding
+	
+	
+-> Whenever a custom vision project is created, there are two resources created on Azure.
+	- One is used for training the model.
+	- Other is used for testing / prediction.
+	
+-> Language Services : Language Studio
+-> Speech Services : Speech Studio
+-> Translator Service : Translator Studio
+-> Custom Vision : Custom Vision Portal
+-> Document Intelligence : Document Intelligence Studio
+
+-> Image Classification : An image can belong to one or more category. Categorize the image. An image is A / B / C? 
+
+-> Object Detection : In an image, check whether an object is present or not? If it's present, where is it located? (Coordinates)
+
+-> Video Indexer Service capabilities:
+Facial recognition - detecting the presence of individual people in the image. This requires Limited Access approval.
+Optical character recognition - reading text in the video.
+Speech transcription - creating a text transcript of spoken dialog in the video.
+Topics - identification of key topics discussed in the video.
+Sentiment - analysis of how positive or negative segments within the video are.
+Labels - label tags that identify key objects or themes throughout the video.
+Content moderation - detection of adult or violent themes in the video.
+Scene segmentation - a breakdown of the video into its constituent scenes.
+
+-> Image generation with AI
+	- Diffusion Models
+	- Pixel by pixel and layer by layer.
+	- Dont search for an image from internet
+	- Generate images from scratch.
+	- Text to image
+	- DALL-E 3.0
+	
+-----------------------------------------------------------------
+
+Information Extraction:
+-> Documents, Images, Audio clips, Videos : Extract -> Analyze -> Take action
+
+	1. Extract text from images -> OCR -> Just read the text from an image.
+	
+	2. Extract information from documents (invoices, receipts, tax forms, marriage certificates, credit cards, paychecks etc.) -> Read -> Extract meaning from the data -> Extract fields (key-value pairs).
+	
+	Invoice -> Customer Name : John Doe -> Invoice Date : 23rd Jan 2026
+			-> Total Amount : 20$
+			
+	- Digitization of documents : Physical Forms filled by people manually
+	
+	=> Document Intelligence Service (Form Recognizer)
+	
+	3. Extract information from documents, images, audio, video. 
+	Multimodal information extraction system.
+	Apply generative AI (LLM) on that information. -> Analyze, Think, Transform, Format, Create reports, Action items, Enhance.
+	- The information to be extracted (SCHEMA) -> We have to train the model.
+	- Schema has to be defined by us.
+	- Custom solution.
+	
+	=> Azure Content Understanding
+	-> Content Understanding analyzer : The thing which analyzes the content and is trained with the expected schema.
+	-> To create the analyzer with schema -> PUT
+	-> To analyze content -> POST
+	-> To check analysis status -> GET
+	
+	
+-> Knowledge Mining : Storing and Retrieving information 
+	- Azure AI Search
+	- searchable solution for your data.
+	1. Data (documents) upload - Data Ingestion
+	2. Document Cracking and Data Extraction
+	3. AI Enrichment Pipeline - Apply AI skills on the extracted data. (detect language, translate, caption, tags, sentiment analysis etc.)
+	4. Index -> JSON -> Knowledge Store (Stores projections)
+	 - JSON, Images, Key-values -> Table Storage, Storage Account
+	 
+	Run searches on the data. -> Runs query on the data. -> Extract matching documents with the query. -> TF/IDF - Term frequency / Inverse Document Frequency (orders the results as per relevance) 
+	
+	-> Documents - Reviews of my restaurant. -> search positive reviews
+	
+	-> Fabulous place! Love the vibe. The place looks amazing in evenings.
+	-> Great place! Amazing vibe.
+	
+=====================================================================
+
+Journey Ahead:
+1. Complete your self-learning
+	- Recordings
+	- Notepad files
+	- Complete the MS learn course (https://learn.microsoft.com/en-us/training/courses/ai-102t00)
+	- Complete the GSI Labs
+	
+	- Practice quizzes by Neha
+	- Mock exam -> Microsoft -> End of Labs (last item in the list)
+	- Practice tests on Udemy, YouTube. 
+	- Browser search - AI-102 latest questions (Be careful with dates)
+	
+2. Invite for an internal qualifying assessment.
+	- Email invite by Amit. More info in email - DoSelect - TechM laptop - TechM ID - 30-35 questions - 60-70 mins - 4 or 5 days including weekends - Results will be shared after the exam window closes. - 70% pass percentage. 
+	
+3. When you clear the internal exam, you will get 100% discount voucher. You can schedule the exam.
+
+4. Link your TechM ID and personal email ID in MS Learn. (document shared on last day).
+Can do this today itself. Mandatory.
+
+https://www.pearsonvue.com/us/en/microsoft/onvue.html
